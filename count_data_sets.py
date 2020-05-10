@@ -23,7 +23,7 @@ with open("/vol3/erhan/he9318-mag-20191226-0/nlp/PaperCitationContexts.txt", "r"
             if keywords_found:
                 for keyword in keywords_found:
                     citation_context_count[keyword[0]] += 1
-                    outp.write("\t".join(map(str, keyword).append(line_count, citation_context) + "\n"))
+                    outp.write("\t".join(map(str, keyword).append(line_count, citation_context)) + "\n")
             line_count += 1
 with open("citation_context_count.txt", "w") as outp:
     for item in citation_context_count:
@@ -41,7 +41,7 @@ with open("/vol3/erhan/he9318-mag-20191226-0/PaperAbstracts_CS_nonPatent.txt", "
                 if keywords_found:
                     for keyword in keywords_found:
                         abstract_count[keyword[0]] += 1
-                        outp.write("\t".join(map(str, keyword).append(line_count, abstract) + "\n"))
+                        outp.write("\t".join(map(str, keyword).append(line_count, abstract)) + "\n")
                 line_count += 1
 with open("abstract_count.txt", "w") as outp:
     for item in abstract_count:
