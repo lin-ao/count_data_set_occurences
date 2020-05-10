@@ -11,6 +11,7 @@ with open("dataset-names-clean.txt", "r") as inp:
         data_set_count[data_set_name_cleaned] = 0
         keyword_processor.add_keyword(data_set_name_cleaned)
 
+        
 line_count = 1
 citation_context_count = data_set_count.copy()
 with open("/vol3/erhan/he9318-mag-20191226-0/nlp/PaperCitationContexts.txt", "r") as inp:
