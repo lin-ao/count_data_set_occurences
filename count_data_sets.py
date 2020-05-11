@@ -16,7 +16,6 @@ citation_context_count = data_set_count.copy()
 with open("/vol3/erhan/he9318-mag-20191226-0/nlp/PaperCitationContexts.txt", "r") as inp:
     with open("citation_context_matches_CS.txt", "w") as outp:
         for line in inp:
-            print("Citation Context: " + str(line_count))
             paper_id, reference_id, citation_context = line.strip("\n").split("\t")
             keywords_found = keyword_processor.extract_keywords(citation_context, span_info=True)
             if keywords_found:
@@ -33,7 +32,6 @@ abstract_count = data_set_count.copy()
 with open("/vol3/erhan/he9318-mag-20191226-0/PaperAbstracts_CS_nonPatent.txt", "r") as inp:
     with open("abstract_matches_CS.txt", "w") as outp:
             for line in inp:
-                print("Paper Abstract: " + str(line_count))
                 paper_id, abstract = line.strip("\n").split("\t")
                 keywords_found = keyword_processor.extract_keywords(abstract, span_info=True)
                 if keywords_found:
